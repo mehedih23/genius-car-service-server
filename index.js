@@ -46,7 +46,7 @@ async function run() {
             const user = req.body;
             const accessToken = jwt.sign(user, process.env.JWT_ACCESS_TOKEN, {
                 expiresIn: '1d'
-            })
+            });
             console.log(accessToken)
             res.send({ accessToken });
         })
